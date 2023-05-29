@@ -1,0 +1,128 @@
+.\" _printf man page
+.\"
+.\"
+.\"
+.\"
+.\"
+.TH _PRINTF "May 29 2023" "0.1" "man page"
+
+.SH NAME
+
+.B_printf
+- Rosina and Salomey's C printf project.
+
+.SH SYNOPSIS
+
+#include "main.h"
+#include "holberton.h" are needed.
+
+.SH DESCRIPTION
+
+This version of the printf function will write formatted output to the standard output stream (stdout).
+A well explained _printf function() for learning purposes was developed by Salomey Peprah and Rosina Attoh of #Cohort 14.
+_printf() function format specifier is a character specifier, beginning and ending in its initial shift state, if any.
+
+.SS Compilation
+
+.P
+.RS
+#include "main.h"
+#include "holberton.h"
+
+$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
+gcc -Wall -Wextra -Werror -pedantic -std=gnu89 main.c (for checking of codes)
+.RE
+
+.SS Printing
+.RS
+
+int _printf(const char *[FORMAT], ...);
+
+FORMAT is the string that takes the "n" specifier followed by a "%"
+symbol. i.e. "Hello this is %s from %d cohort". '...' is the variadic \
+(any type of variable).
+
+.SS Example
+
+.RS
+
+.B Input
+.PP
+_printf("Hello this is %s from %d cohort\\n\\", 33);
+.PP
+.B Output
+.PP
+Hello this is %s from %d cohort
+.RE
+
+.SS Return Value
+
+Return value is a number of characters except NULL
+
+.SH FLAG SPECIFIERS
+.SH ""
+
+custom and non-custom specifier modifiers
+
+.SH THE LENGTH MODIFIERS
+.SH ""
+
+Length modifiers.
+
+.SH THE CONVERSION SPECIFIERS
+.SH ""
+
+.RS
+Current arguments handled by conversion specifiers:
+
+.IT
+.B %
+- % symbol is set without argument and conversion specification has to be'%%'.
+
+.IT
+.B c
+- integer or char argument converted to unsigned char.
+
+.IT
+.B d, i
+- int argument is converted to signed decimal integer.
+
+.IT
+.B s
+- string argument. _printf handles s conversion specifier if the argument value
+ is not a pointer to a literal string. \
+
+.IT
+
+.B o, u, x, X
+- unsigned int argument converted to unsigned octal (o), unsigned decimal (u),
+unsigned hexidecimal notation (x) for lower case and (X) for upper case
+
+.IT
+.B b
+- The unsigned int argument is converted to binary.
+
+.IT
+.B p
+- The pointer is printed in hexidecimal format preceded by '0x'.
+
+.IT
+.B r, R
+- 'r' prints string in reverse. 'R' prints encrypted rot13.
+
+.IT
+.B S
+- ascii <32 & >127 has to appear in the argument string. converted to
+hexadecimal preceded by \x
+
+.RE
+
+.P
+
+.SH "AUTHORS"
+.SH ""
+
+Salomey Peprah and Rosina Attoh
+
+.B github .PP
+salomeypeprah and rhosina2023 -github
